@@ -2,7 +2,7 @@
 <div id="page-wrapper">
 	<div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header">SSH User List
+            <h1 class="page-header">SSH Users List
             </h1>
         </div>
     </div>
@@ -54,7 +54,7 @@
                         </table>
                     </div>
                 </div>
-				<div class="panel-footer"> <?php if (isset($counter)) {echo 'Total user : '. $counter; } ?> | <?php if (isset($jumlah)) {echo 'Total penjualan : '. $jumlah; } ?></div>
+				<div class="panel-footer"> <?php if (isset($counter)) {echo 'Total user : '. $counter; } ?> | <?php if (isset($jumlah)) {echo 'Total sales : '. $jumlah; } ?></div>
             </div>
         </div>
     </div>
