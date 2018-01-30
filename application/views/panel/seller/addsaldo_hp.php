@@ -2,14 +2,14 @@
 <div id="page-wrapper">
 	 <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header">Tambah Saldo (Via-Pulsa)</h1>
-            <div class="well">Saldo Anda : <B><?php if (isset($user->saldo)) {echo $user->saldo; }?></B></div>
+            <h1 class="page-header">Add Balance (Via-Topup)</h1>
+            <div class="well">Your Balance : <B><?php if (isset($user->saldo)) {echo $user->saldo; }?></B></div>
         </div>
     </div>
     <div class="row">
 		  <div class="col-sm-6">
-			   <p class="text-muted">Catatan: jika sudah membayar, silakan klik konfirmasi maka saldo anda akan bertambah otomatis setelah di cek admin.</p>
-			   <p class="text-info">Silakan kirim pulsa ke salah satu no berikut: </p>
+			   <p class="text-muted">Note : jika sudah membayar, Please click on the confirmation button and your balance will added automatically after the payment has been reviewed by admin.</p>
+			   <p class="text-info">Please topup to one of these numbers : </p>
 			   <?php foreach ($this->user_model->view_asset() as $row): ?>
 					<?php if (!empty($row['nohp'])): ?>
 					<p class="text-default" align="center"> <?= $row['pemilik']?><br> <?= $row['nohp']?> <br> <?= $row['provider']?> </p>
@@ -34,12 +34,12 @@
 					<?php endif;?>
 			   <?= form_open() ?>
 					<div class="form-group">
-						<label for="sender">No Hp pengirim / mkios kode</label>
-						<input type="text" name="sender" class="form-control" id="sender" placeholder="Masukan no hp/mkios kode"/>
-						<small class="text-muted">Untuk bukti telah membayar</small>
+						<label for="sender">Sender's Reference Code</label>
+						<input type="text" name="sender" class="form-control" id="sender" placeholder="Insert Reference Code"/>
+						<small class="text-muted">As payment prove</small>
 					</div>
 					<div class="form-group">
-						<label for="hp">No Hp yg dikirim</label>
+						<label for="hp">Sender's Phone Number</label>
 						<select name="hp" id="hp" class="form-control">
 							<?php foreach ($this->user_model->view_asset() as $row): ?>
 							<?php if (!empty($row['nohp'])): ?>
@@ -49,12 +49,12 @@
 						</select>
 					</div>
 					<div class="form-group">
-						<label for="hp">Jumlah deposit</label>
-						<input type="number" name="jumlah" class="form-control" id="jumlah" value="30000"/>
-						<small class="text-muted">Jumlah deposit minimal 30000</small>
+						<label for="hp">Total deposit</label>
+						<input type="number" name="jumlah" class="form-control" id="jumlah" value="5"/>
+						<small class="text-muted">Total minimum deposit RM 5</small>
 					</div>
 					<div class="form-group">
-						<input type="submit" class="btn btn-primary form-control" value="Konfirmasi"/>
+						<input type="submit" class="btn btn-primary form-control" value="Confirm"/>
 					</div>
 			   </form>
             </div>
