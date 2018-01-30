@@ -136,7 +136,7 @@ class Login extends Ci_Controller {
 				$_SESSION['logged_in']    = (bool)true;
 				$_SESSION['is_confirmed'] = (bool)$user->is_confirmed;
 				$_SESSION['is_admin']     = (bool)$user->is_admin;
-				$data -> success = '<div class="alert alert-success">Registrasi Akun berhasil</div>';
+				$data -> success = '<div class="alert alert-success">Account registration successful</div>';
 				$this->load->view('panel/base/page_header');
 				$this->load->view('panel/setting', $data);
 				$this->load->view('panel/base/footer');
@@ -168,10 +168,10 @@ class Login extends Ci_Controller {
 			if ($_POST) {
 				if ($this->__validate_login($_POST)) {
 					if (!$this->user_model->resolve_user_login($_SESSION['username'], $_POST['oldpass'])) {
-						$data->message='<div class="alert alert-danger">Password lama yang anda masukan salah</div>';
+						$data->message='<div class="alert alert-danger">Wrong old password</div>';
 					}
 					elseif($_POST['password'] !== $_POST['passconf']) {
-						$data->message='<div class="alert alert-warning">confirm passwd salah </div>';
+						$data->message='<div class="alert alert-warning">Password confirmation did not match </div>';
 					}
 					else {
 						if ($this->user_model->update_login($_POST)) {
@@ -179,7 +179,7 @@ class Login extends Ci_Controller {
 						}
 					}
 				}
-					else {$data->message ='<div class="alert alert-danger">Form harus diisi lengkap</div>';}
+					else {$data->message ='<div class="alert alert-danger">Form must be filled in completely</div>';}
 			}
 				$this->_set_view('panel/setting', $data);
 		}
