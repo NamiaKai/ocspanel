@@ -8,7 +8,7 @@
     </div>
     <div class="row">
 		  <div class="col-sm-6">
-			   <p class="text-muted">Note : jika sudah membayar, Please click on the confirmation button and your balance will added automatically after the payment has been reviewed by admin.</p>
+			   <p class="text-muted">Note : if paid, Please click on the confirmation button and your balance will added automatically after the payment has been reviewed by admin.</p>
 			   <p class="text-info">Please topup to one of these numbers : </p>
 			   <?php foreach ($this->user_model->view_asset() as $row): ?>
 					<?php if (!empty($row['nohp'])): ?>
