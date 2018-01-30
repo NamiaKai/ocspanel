@@ -2,7 +2,7 @@
 <div id="page-wrapper">
 	<div class="row">
         <div class="col-lg-12">
-            <h4 class="page-header"><i class="fa fa-credit-card"></i> Tambah No Req</h4>
+            <h4 class="page-header"><i class="fa fa-credit-card"></i> Add Account Bank</h4>
         </div>
     </div>
     <div class="row">
@@ -20,32 +20,32 @@
 			   <?php endif;?>
 			   <?= form_open() ?>
 					<div class="form-group">
-						<label for="rekening">No Rekening</label>
-						<input type="text" name="rekening" class="form-control" id="rekening" placeholder="Nomor rekening anda"/>
-						<small class="text-muted">Kosongkan jika tidak ingin menambahkan</small>
+						<label for="rekening">Account Bank Number</label>
+						<input type="text" name="rekening" class="form-control" id="rekening" placeholder="Your account bank number"/>
+						<small class="text-muted">Leave blank if you do not want to add</small>
 					</div>
 					<div class="form-group">
-						<label for="bank">Nama Bank</label>
-						<input type="text" name="bank" class="form-control" id="bank" placeholder="BCA"/>
-						<small class="text-muted">Kosongkan jika tidak ingin menambahkan</small>
+						<label for="bank">Bank Name</label>
+						<input type="text" name="bank" class="form-control" id="bank" placeholder="CIMB"/>
+						<small class="text-muted">Leave blank if you do not want to add</small>
 					</div>
 					<div class="form-group">
-						<label for="pemilik">Nama Pemilik Rekening</label>
+						<label for="pemilik">Account Owner Name</label>
 						<input type="text" name="pemilik" class="form-control" id="pemilik" placeholder="Adipati Arya"/>
-						<small class="text-muted">Kosongkan jika tidak menambah rekening</small>
+						<small class="text-muted">Leave blank if not add account</small>
 					</div>
 					<div class="form-group">
-						<input type="submit" class="btn btn-primary form-control" value="Tambahkan"/>
+						<input type="submit" class="btn btn-primary form-control" value="Add"/>
 					</div>
 			   </form>
 		   </div>
 		   <div class="col-lg-6">
 			   
 				<?php if (!empty($asset)):?>
-					<h4 class="page-header">Rekening aktif</h4>
+					<h4 class="page-header">Active Account</h4>
 					<div class="table-responsive"><table class="table table-hover">
 						<thead>
-							<tr><th>#</th><th>Rek</th><th>Bank</th><th>Pemilik</th></tr>
+							<tr><th>#</th><th>Rek</th><th>Bank</th><th>Owner</th></tr>
                         </thead>
                         <tbody>
 						<?php foreach ($asset as $row): ?>
@@ -62,7 +62,7 @@
 						</tbody>
 					</table></div>
 					<?php else: ?>
-						<h4 class="page-header">Anda belum menambahkan rekening</h4>
+						<h4 class="page-header">You have not added an account yet</h4>
 				<?php endif; ?>
 			</div>
     </div>
