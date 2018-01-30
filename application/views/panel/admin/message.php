@@ -32,7 +32,7 @@
                                                 <td><?= $row['pesan']?></td>
                                                 <td><?= $row['created_at']?></td>
                                                 <td>
-                                                    <a href="<?= base_url('admin/konfirm_msg/').$row['id']?>" class="btn btn-info"> Konfirm</a>
+                                                    <a href="<?= base_url('admin/konfirm_msg/').$row['id']?>" class="btn btn-info"> Confirm</a>
                                                 </td>
                                                 <td>
                                                     <a href="<?= base_url('admin/del_msg/').$row['id'] ?>" class="btn btn-danger"> Del</a>
