@@ -13,7 +13,7 @@
 				<?php endif; ?>
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h3 class="panel-title"><i class="fa fa-sign-in fa-fw"></i> Silahkan Login Dahulu</h3>
+                        <h3 class="panel-title"><i class="fa fa-sign-in fa-fw"></i> Please Login First</h3>
                     </div>
                     <div class="panel-body">
                         <?= form_open() ?>
@@ -36,7 +36,7 @@
                     </div>
                  
                 </div>
-                <p>Belum punya akun Seller klik? <a href="<?= base_url('panel/register') ?>">Daftar</a></p>
+                <p>Do not have reseller account yet? <a href="<?= base_url('panel/register') ?>">Register</a></p>
             </div>
           
         </div>
