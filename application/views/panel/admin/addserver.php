@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-lg-12">
             <h1 class="page-header">
-               Tambah Server
+               Add Server
             </h1>
         </div>
     </div>
@@ -31,13 +31,13 @@
                         </div>
                         <div class="form-group">
                             <label>IP / Host</label>
-                            <input class="form-control" placeholder="192.168.1.1 atau www.example-server.com" name="HostName" type="text" required>
+                            <input class="form-control" placeholder="192.168.1.1 or www.example-server.com" name="HostName" type="text" required>
                         </div>
                         <div class="form-group">
-                            <label>Harga Sewa / Bulan</label>
+                            <label>Price</label>
                             <div class="input-group">
-                                <span class="input-group-addon">Rp. </span>
-                                <input class="form-control" placeholder="10000" name="Price" type="number" step="100" required>
+                                <span class="input-group-addon">RM </span>
+                                <input class="form-control" placeholder="5" name="Price" type="number" step="5" required>
                             </div>
                         </div>
                         <div class="form-group">
