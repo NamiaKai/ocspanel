@@ -30,7 +30,7 @@ if($_POST) {
 
 		// If no errors, redirect to registration page
 		if(!isset($message)) {
-		    $success = $core -> show_message('success', "Installasi berhasil mohon untuk menghapus folder 'install' ");
+		    $success = $core -> show_message('success', "Installation successful, please folder 'install' ");
 		    /*
 			$redir = ((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == "on") ? "https" : "http");
 			$redir .= "://".$_SERVER['HTTP_HOST'];
