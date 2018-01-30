@@ -60,16 +60,16 @@ class Seller extends CI_Controller {
 				$hp = $this->input->post('hp');
 				$jumlah= $this->input->post('jumlah');
 				if (empty($mkios)) {
-					$pesan = $user->username. ' Meminta saldo via no hp: ' .$sender. ' dikirim ke nomor : '. $hp .' sebesar : '. $jumlah;
+					$pesan = $user->username. ' Request balance via phone number: ' .$sender. ' sent to number : '. $hp .' amount : '. $jumlah;
 					} else {
-						$pesan = $user->username. ' Meminta saldo via mkios Dengan no seri ' .$mkios. ' dikirim ke nomor '.$hp.' sebesar : '. $jumlah;
+						$pesan = $user->username. ' Request balance via bank in reference number ' .$mkios. ' sent to number '.$hp.' amount : '. $jumlah;
 					}
 				$userid=$_SESSION['user_id'];
 				if ($this->user_model->deposit($userid, $pesan, $jumlah)) {
 					
 					
 					 $data = new stdClass();
-					 $data -> message = 'Terimakasih telah membeli ssh di server kami . silkan tunggu beberapa saat saldo anda akan bertambah otomatis, konfirmasi ini membutuhkan waktu paling lama 1x24 jam.';
+					 $data -> message = 'Thank you for purchased SSH account from us . Please wait for a while and your balance will added automatically, this confirmation will take at least 24 hours to be processed.';
 					 $data->user = $this->user_model->get_user($_SESSION['user_id']);
 					 $this->_set_view('panel/seller/addsaldo_hp', $data);
 				}
@@ -98,10 +98,10 @@ class Seller extends CI_Controller {
 				$jumlah= $this->input->post('jumlah');
 				$userid=$_SESSION['user_id'];
 				
-				$pesan = $user->username. ' Meminta saldo sebesar '. $jumlah. ' via reqkening '. $sender. ' Dengan atas nama '.$username.' ke no req '. $rekening;
+				$pesan = $user->username. ' Reques balance amount '. $jumlah. ' via bank in '. $sender. ' On name '.$username.' to bank account '. $rekening;
 				if ($this->user_model->deposit($userid, $pesan, $jumlah)) { 
 					 $data = new stdClass();
-					 $data -> message = 'Terimakasih telah membeli ssh di server kami . silkan tunggu beberapa saat saldo anda akan bertambah otomatis, konfirmasi ini membutuhkan waktu paling lama 1x24 jam.';
+					 $data -> message = 'Thank you for purchased SSH account from us . Please wait for a while and your balance will added automatically, this confirmation will take at least 24 hours to be processed.';
 					 $data->user = $this->user_model->get_user($_SESSION['user_id']);
 					 $this->_set_view('panel/seller/addsaldo_req', $data); 
 				}
@@ -121,7 +121,7 @@ class Seller extends CI_Controller {
 		        {
 					 
 					 $data = new stdClass();
-					 $data->message='<p class="text-danger">Saldo anda kurang</p>';
+					 $data->message='<p class="text-danger">You do not have enough balance</p>';
 					 $data->user = $this->user_model->get_user($_SESSION['user_id']);
 					 $data->server=$this->user_model->get_hostname();
 					 $this->_set_view('panel/seller/servers', $data);
@@ -143,7 +143,7 @@ class Seller extends CI_Controller {
 						$server=$this->user_model->get_hostname($id);
 						$by = $this->user_model->get_user($_SESSION['user_id']);
 						$dat = array(
-							'message' => '<div class="alert alert-success">Akun sukses dibuat</div>',
+							'message' => '<div class="alert alert-success">Account created successfully</div>',
 						    'hostname'=>$server->HostName,
 						    'rootpass'=>$server->RootPasswd,
 						    'openssh'=>$server->OpenSSH,
@@ -175,7 +175,7 @@ class Seller extends CI_Controller {
 										$this->load->view('panel/base/footer');
 									}
 								}
-							} else { echo "root pass salah";}
+							} else { echo "Root passwd wrong!";}
 							
 						}
 						
