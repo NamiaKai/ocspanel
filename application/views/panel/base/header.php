@@ -7,7 +7,7 @@
 		<meta name="description" content=""/>
 		<meta name="keywords" content=""/>
 		<meta name="author" content=""/>
-		<title>Admin Panel</title>
+		<title>Admin's Panel</title>
 		<!-- core CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
