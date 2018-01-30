@@ -2,9 +2,9 @@
 <div id="page-wrapper">
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header">SSH User List
+            <h1 class="page-header">SSH Users List
                 <small><?= $server -> HostName ?></small>
-                <a href="<?= base_url('seller/buy/'. $server->Id )?>" class="btn btn-default pull-right"><i class="fa fa-plus fa-fw"></i> Tambah</a>
+                <a href="<?= base_url('seller/buy/'. $server->Id )?>" class="btn btn-default pull-right"><i class="fa fa-plus fa-fw"></i> Add</a>
             </h1>
         </div>
     </div>
@@ -12,7 +12,7 @@
         <div class="col-lg-12">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <i class="fa fa-group fa-fw"></i> Account List
+                    <i class="fa fa-group fa-fw"></i> Accounts List
                 </div>
                 <div class="panel-body">
                     <div class="table-responsive">
