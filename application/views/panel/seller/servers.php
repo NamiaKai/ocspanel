@@ -4,10 +4,10 @@
         <div class="col-lg-12">
             <h1 class="page-header">Server List</h1>
             <div class="dropdown pull-right">
-				<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown"><span class="fa fa-plus fa-fw"></span> Tambah saldo</button>
+				<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown"><span class="fa fa-plus fa-fw"></span> Add balance</button>
 				<ul class="dropdown-menu">
-					<li class="active"><a href="<?= base_url('panel/reseller/'.str_replace(' ','-',$_SESSION['username']).'/addsaldo-via-req') ?>">Via Rekening</a></li>
-					<li><a href="<?= base_url('panel/reseller/'.str_replace(' ','-',$_SESSION['username']).'/addsaldo-via-hp') ?>">Via Pulsa/Mkios</a></li>
+					<li class="active"><a href="<?= base_url('panel/reseller/'.str_replace(' ','-',$_SESSION['username']).'/addsaldo-via-req') ?>">Via Bank in</a></li>
+					<li><a href="<?= base_url('panel/reseller/'.str_replace(' ','-',$_SESSION['username']).'/addsaldo-via-hp') ?>">Via Topup</a></li>
 				</ul>
             </div>
             
@@ -30,13 +30,13 @@
                     </div>
                     <table class="table">
                         <tr>
-                            <td>Lokasi</td><td><?= $row['Location']?></b></td>
+                            <td>Location</td><td><?= $row['Location']?></b></td>
                         </tr>
                         <tr>
                             <td>Host</td><td><?= $row['HostName']?></b></td>
                         </tr>
                         <tr>
-                            <td>Harga</td><td><?= $row['Price']?></b></td>
+                            <td>Price</td><td><?= $row['Price']?></b></td>
                         </tr>
                     </table>
                     <div class="panel-footer text-center">
