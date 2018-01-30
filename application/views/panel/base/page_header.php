@@ -7,7 +7,7 @@
 		<meta name="description" content=""/>
 		<meta name="keywords" content=""/>
 		<meta name="author" content=""/>
-		<title>Admin Panel</title>
+		<title>Admin's Panel</title>
 		<!-- core CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/metisMenu/2.0.0/metisMenu.min.css">
@@ -37,7 +37,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/home"><i class="fa fa-dashboard fa-lg fa-fw"></i> OCS Panel Reborns</a>
+            <a class="navbar-brand" href="/home"><i class="fa fa-dashboard fa-lg fa-fw"></i> Twin Dragon OCS Panel</a>
         </div>
 
         <div class="navbar-default sidebar" role="navigation">
@@ -65,21 +65,21 @@
                                 <a href="<?= base_url('panel/administrator/'.$_SESSION['username'].'/server') ?>"><i class="fa fa-th-list fa-fw"></i> Server</a>
                             </li>
                             <li>
-                                <a href="<?= base_url('admin/notify') ?>"><span class="glyphicon glyphicon-envelope"></span> Kotak masuk <?php if (isset($msg)): ?>
+                                <a href="<?= base_url('admin/notify') ?>"><span class="glyphicon glyphicon-envelope"></span> Inbox <?php if (isset($msg)): ?>
 									<span class="badge"><?= count($msg) ?></span>
                                 
                                 <?php endif; ?>
                                 </a>
                             </li>
-						<li><a href="<?= base_url('panel/'.$_SESSION['username'].'/setting')?>"><i class="fa fa-key"></i> Sandi</a></li>
-							<li><a href="<?= base_url('admin/asset')?>"><i class="fa fa-phone"></i> No.Telp</a></li>
-							<li><a href="<?= base_url('admin/asset_req')?>"><i class="fa fa-credit-card"></i> No.Req</a></li>
+						<li><a href="<?= base_url('panel/'.$_SESSION['username'].'/setting')?>"><i class="fa fa-key"></i> User</a></li>
+							<li><a href="<?= base_url('admin/asset')?>"><i class="fa fa-phone"></i> Telephone Number</a></li>
+							<li><a href="<?= base_url('admin/asset_req')?>"><i class="fa fa-credit-card"></i> Bank Account Number</a></li>
                         <?php else: ?>
                          <li>
                               <a href="<?= base_url('panel/reseller/'.$_SESSION['username'].'/server') ?>"><i class="fa fa-shopping-cart fa-fw"></i> Buy SSH Account</a>
                         </li>
                         <li>
-                              <a href="<?= base_url('panel/reseller/cek_account/'.$_SESSION['username']) ?>"><i class="fa fa-users"></i> Cek account</a>
+                              <a href="<?= base_url('panel/reseller/cek_account/'.$_SESSION['username']) ?>"><i class="fa fa-users"></i> Check account</a>
                         </li>
                         <li>
 							<a href="<?= base_url('panel/'.$_SESSION['username'].'/setting')?>"><i class="fa fa-gear fa-fw"></i> Setting</a>
