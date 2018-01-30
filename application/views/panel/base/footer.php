@@ -10,7 +10,7 @@
 	<script src="<?= base_url('asset/js/bootstrap-dialog.min.js') ?>"></script>
 		 <script type="text/javascript">
         $('.input-group.date').datepicker({
-            format: "yyyy/mm/dd",
+            format: "dd/mm/yyyy",
             weekStart: 1,
             clearBtn: true,
             language: "id",
@@ -21,10 +21,10 @@
             e.preventDefault();
             BootstrapDialog.confirm({
                 title: 'Confirm',
-                message: ' Konfirmasi ?',
+                message: ' Sure ?',
                 type: BootstrapDialog.TYPE_DANGER,
                 closable: true,
-                btnCancelLabel: 'Batal',
+                btnCancelLabel: 'Cancel',
                 btnOKLabel: 'Delete',
                 btnOKClass: 'btn-danger',
                 callback: function(result) {
