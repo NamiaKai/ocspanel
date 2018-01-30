@@ -2,7 +2,7 @@
 <div id="page-wrapper">
 	<div class="row">
         <div class="col-lg-12">
-            <h4 class="page-header"><i class="fa fa-phone"></i> Tambah No hp</h4>
+            <h4 class="page-header"><i class="fa fa-phone"></i> Add Phone Number</h4>
         </div>
     </div>
     <div class="row">
@@ -20,33 +20,34 @@
 			   <?php endif;?>
 			   <?= form_open() ?>
 					<div class="form-group">
-						<label for="pemilik">Pemilik nomor</label>
-						<input type="text" name="pemilik" class="form-control" id="pemilik" placeholder="Adipati Arya"/>
+						<label for="pemilik">Number Owner</label>
+						<input type="text" name="pemilik" class="form-control" id="pemilik" placeholder="Aiman Amir"/>
 					</div>
 					<div class="form-group">
-						<label for="nohp">No HP</label>
-						<input type="text" name="nohp" class="form-control" id="nohp" placeholder="Nomor telpon anda"/>
-						<small class="text-muted">Nomor ini akan digunakan seller untuk tranfer pulsa(wajib diisi)</small>
+						<label for="nohp">Phone Number</label>
+						<input type="text" name="nohp" class="form-control" id="nohp" placeholder="Your Phone Number"/>
+						<small class="text-muted">Reseller will use this number to transfer money (must fill)</small>
 					</div>
 					<div class="form-group">
 						<label for="provider">Provider</label>
 						<select name="provider" class="form-control">
-							<option value="Telkomsel">Telkomsel</option>
-							<option value="Indosat">Indosat</option>
-							<option value="XL">XL</option>
+							<option value="Digi">Digi</option>
+							<option value="Umobile">Umobile</option>
+							<option value="Maxis">Maxis</option>
+							<option value="Celcom">Celcom</option>
 						</select>
 					</div>
 					<div class="form-group">
-						<input type="submit" class="btn btn-primary form-control" value="Tambahkan"/>
+						<input type="submit" class="btn btn-primary form-control" value="Add"/>
 					</div>
 			   </form>
 		   </div>
 		  <div class="col-xs-6">
 				<?php if (!empty($asset)):?>
-					<h4>No Telpn Aktif</h4>
+					<h4>Active Telephone Number</h4>
 					<div class="table-responsive"><table class="table table-hover">
 						<thead>
-							<tr><th>#</th><th>Nama</th><th>No Telp</th><th>Provider</th></tr>
+							<tr><th>#</th><th>Name</th><th>Telephone Number</th><th>Provider</th></tr>
                         </thead>
                         <tbody>
 						<?php foreach ($asset as $row): ?>
@@ -62,7 +63,7 @@
 						</tbody>
 					</table></div>
 					<?php else: ?>
-						<h4 class="page-header">Anda belum menambahkan no telpon</h4>
+						<h4 class="page-header">You did not add a telephone number yet</h4>
 				<?php endif; ?>
 			</div>
    
