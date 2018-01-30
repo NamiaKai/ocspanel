@@ -65,12 +65,12 @@ class Admin extends CI_Controller {
 				if ($_POST) {
 					if ( $this->__validate_post($_POST) ) {
 						if ( $this->user_model->create_hostname($_POST) ) {
-							$data->message = '<div class="alert alert-success">Server Berhasil ditambahkan.</div>';
+							$data->message = '<div class="alert alert-success">Server added successfully.</div>';
 							$data->server = $this -> user_model -> get_hostname();
 							$this->_set_view('panel/admin/servers', $data);
 							return;
-						}else{ $data->message='<div class="alert alert-danger">Terjadi kesalahan saart penambahan server</div>';}
-					} else { $data->message='<div class="alert alert-warning">Form harus diisi lengkap</div>'; }
+						}else{ $data->message='<div class="alert alert-danger">An error occured during adding server server</div>';}
+					} else { $data->message='<div class="alert alert-warning">Form must be filled in completely</div>'; }
 					
 				}
 				$this->_set_view('panel/admin/addserver', $data);
@@ -93,12 +93,12 @@ class Admin extends CI_Controller {
 				if ($this->__validate_post($_POST)) {
 					if ($this -> user_model->update_server($_POST, $id)) {
 						
-						$data -> message = '<div class="alert alert-success">Success edit server</div>';
+						$data -> message = '<div class="alert alert-success">rvr edited successfully</div>';
 						$data -> server = $this->user_model->get_hostname($id);
 					}
 				} else {
 					
-					$data->message = '<div class="alert alert-danger">Form tidak boleh ada yg dikosongkan</div>';
+					$data->message = '<div class="alert alert-danger">Form must be filled in completely</div>';
 					$data -> server = $this->user_model->get_hostname($id);
 					}
 			}
@@ -136,13 +136,13 @@ class Admin extends CI_Controller {
 		if ( isset($_SESSION['username']) && $_SESSION['is_admin'] === true ) {
 			if ($cmd === 'lock') {
 				if ($this -> user_model->update_server(array('Status' => false), $id)) {
-					$data -> message = '<div class="alert alert-danger">Server berhasil di lock</div>';
+					$data -> message = '<div class="alert alert-danger">Server locked successfully</div>';
 					$this->admin($_SESSION['username']);
 				}
 			}
 			elseif ($cmd === 'unlock') {
 				if ($this -> user_model->update_server(array('Status' => true), $id)) {
-					$data -> message = '<div class="alert alert-success">Success server berhasil di unlock </div>';
+					$data -> message = '<div class="alert alert-success">Server unlocked successfully </div>';
 					$this->admin($_SESSION['username']);
 				}
 			}
@@ -179,7 +179,7 @@ class Admin extends CI_Controller {
 					if ($this->sshcepat->deletAccount($data)) {
 						redirect(base_url('admin/cekuser/'.$data['id']));
 						
-					} else {echo 'Root passwd wrong!';}
+					} else {echo 'Root password wrong!';}
 			}
 		}
 		else { redirect(base_url('login/login')); }
@@ -206,7 +206,7 @@ class Admin extends CI_Controller {
 					if ($this->user_model->asset($post)) {
 						$data = new stdClass();
 						$data->asset=$this->user_model->view_asset();
-						$data->message='<div class="alert alert-success">Data berhasil ditambahkan</div>';
+						$data->message='<div class="alert alert-success">Data added successfully</div>';
 						$this->_set_view('panel/admin/asset', $data);
 						
 					} else {echo 'Database error';} 
@@ -239,7 +239,7 @@ class Admin extends CI_Controller {
 					if ($this->user_model->asset($post)) {
 						$data = new stdClass();
 						$data->asset=$this->user_model->view_asset();
-						$data->message='<div class="alert alert-success">Data berhasil ditambahkan</div>';
+						$data->message='<div class="alert alert-success">Data added successfully</div>';
 						$this->_set_view('panel/admin/asset_req', $data);
 						
 					} else {echo 'Database error';} 
