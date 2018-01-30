@@ -21,7 +21,7 @@
 		<?php endif; ?>
 		<div class="col-md-12">
 			<div class="page-header">
-				<h1>Registrasi Reseller</h1>
+				<h1>Reseller Registration</h1>
 			</div>
 			<?= form_open() ?>
 				<div class="form-group">
@@ -45,7 +45,7 @@
 					<p class="help-block">Must match your password</p>
 				</div>
 				<div class="form-group">
-					<input type="submit" class="btn btn-default" value="Buat akun">
+					<input type="submit" class="btn btn-default" value="Create Account">
 				</div>
 			</form>
 		</div>
