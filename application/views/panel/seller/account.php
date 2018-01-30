@@ -29,16 +29,16 @@
                             <td>Host</td><td>:</td><td><?= $user['hostname']?></td>
                         </tr>
                         <tr>
-                            <td>Lokasi</td><td>:</td><td><?= $user['location']?></td>
+                            <td>Location</td><td>:</td><td><?= $user['location']?></td>
                         </tr>
                         <tr>
-                            <td>Openssh</td><td>:</td><td><?= $user['openssh']?></td>
+                            <td>OpenSSH</td><td>:</td><td><?= $user['openssh']?></td>
                         </tr>
                          <tr>
                             <td>Dropbear</td><td>:</td><td><?= $user['dropbear']?></td>
                         </tr>
                          <tr>
-                            <td>Harga</td><td>:</td><td><?= $user['price']?></td>
+                            <td>Price</td><td>:</td><td><?= $user['price']?></td>
                         </tr>
                         <tr>
                             <td>Exp</td><td>:</td><td><?= date("Y-m-d H:i:s",strtotime("+".$user['expired']." days", time() ) )?></td>
@@ -46,13 +46,13 @@
                     </tbody>
                 </table>
                 <p class="text-muted">
-					Catatan:<br>
-					Untuk squid port menggunakan port(80, 3128, dan 8080)
-					DIlarang menggunakan torrent, login lebih dari 2 akun, apabila melanggar aturan, akun akan terhapus secar otomatis olesh system
+					Note:<br>
+					Squid port : 3128 / 8080
+					Do not torrent, multi-login. Your account will be deleted if one of those rules are not obeyed.
                 </p>
 					<div class="hidden-print">
 					<a href="#" class="btn btn-primary" onclick="print_report()">Print</a>
-					<a href="<?= base_url('panel/reseller/'.$_SESSION['username'].'/server') ?>" class="btn btn-default">Kembali</a>
+					<a href="<?= base_url('panel/reseller/'.$_SESSION['username'].'/server') ?>" class="btn btn-default">Back</a>
 					</div>
 				</div>
             </div>
